@@ -175,7 +175,21 @@ body {
     background-image: none;
     background-color: rgb(45, 45, 45);
 }
-.gwd-img-liye {
+.gwd-img-18sa {
+    position: absolute;
+    left: 0px;
+    width: 231px;
+    height: 113px;
+    top: 0px;
+}
+.gwd-img-17tp {
+    position: absolute;
+    width: 231px;
+    height: 113px;
+    left: 0px;
+    top: 0px;
+}
+.gwd-img-1gse {
     position: absolute;
     width: 231px;
     height: 113px;
@@ -234,11 +248,15 @@ body {
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
           <div class="gwd-div-1d4g" id="video_selection">
-            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01" style="cursor: pointer;">
-              <img is="gwd-image" source="video_00_test.jpg" id="gwd-image_1" class="gwd-img-liye">
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03" style="cursor: pointer;">
+              <img is="gwd-image" source="video_03_thumb.jpg" id="video_03_thumb" class="gwd-img-1gse">
             </div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02" style="cursor: pointer;"></div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03" style="cursor: pointer;"></div>
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02" style="cursor: pointer;">
+              <img is="gwd-image" source="video_02_thumb.jpg" id="video_02_thumb" class="gwd-img-17tp">
+            </div>
+            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01" style="cursor: pointer;">
+              <img is="gwd-image" source="video_01_thumb.jpg" id="video_01_thumb" class="gwd-img-18sa">
+            </div>
           </div>
         </div>
       </div>
@@ -251,11 +269,17 @@ body {
       gwd.actions.events.addHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
+      gwd.actions.events.addHandler('video_01', 'click', gwd.auto_Video_01Click, false);
+      gwd.actions.events.addHandler('video_02', 'click', gwd.auto_Video_02Click, false);
+      gwd.actions.events.addHandler('video_03', 'click', gwd.auto_Video_03Click, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
+      gwd.actions.events.removeHandler('video_01', 'click', gwd.auto_Video_01Click, false);
+      gwd.actions.events.removeHandler('video_02', 'click', gwd.auto_Video_02Click, false);
+      gwd.actions.events.removeHandler('video_03', 'click', gwd.auto_Video_03Click, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -272,6 +296,18 @@ body {
     gwd.handleClose_reportManualClose = function() {
       // GWD Predefined Function
       gwd.actions.gwdDoubleclick.reportManualClose('gwd-ad');
+    };
+    gwd.auto_Video_01Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'aZ5gkJDmZv4', false);
+    };
+    gwd.auto_Video_02Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'BpKJTogZ16A', false);
+    };
+    gwd.auto_Video_03Click = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'Cwkej79U3ek', false);
     };
   </script>
   <script type="text/javascript" id="gwd-init-code">
