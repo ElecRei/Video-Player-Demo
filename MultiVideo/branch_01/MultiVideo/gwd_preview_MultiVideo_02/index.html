@@ -284,10 +284,12 @@ body {
 }
 .gwd-div-14gz {
     position: absolute;
-    width: 231px;
-    height: 113px;
-    left: 0px;
-    top: 0px;
+    height: 122.31px;
+    top: -5px;
+    width: 246px;
+    left: -7px;
+    background-image: none;
+    background-color: rgb(6, 146, 197);
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
   <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
@@ -360,8 +362,8 @@ body {
             </div>
             <div class="gwd-div-zunj gwd-div-kqj3" id="video_01_overlay" style="opacity: 0; cursor: pointer;">
               <div class="gwd-div-14gz" id="overlay_hover_border"></div>
-              <div class="gwd-div-1b3g" id="overlay_background" style=""></div>
-              <p class="gwd-p-17jv" id="overlay_title" style="color: rgb(254, 254, 254); font-family: Cabin, sans-serif; font-size: 1.1em; text-align: center;">Galantis - In My Head (Official Video)
+              <div class="gwd-div-1b3g" id="overlay_background" style="z-index: 100;"></div>
+              <p class="gwd-p-17jv" id="overlay_title" style="color: rgb(254, 254, 254); font-family: Cabin, sans-serif; font-size: 1.1em; text-align: center; z-index: 100;">Galantis - In My Head (Official Video)
                 <br class="">
               </p>
             </div>
@@ -442,11 +444,11 @@ body {
     };
     gwd.auto_Video_01_overlayMouseover1 = function(event) {
       // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; border: solid 4px #FFF; ');
+      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; opacity: .5; ');
     };
     gwd.auto_Video_01_overlayMouseout1 = function(event) {
       // GWD Predefined Function
-      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; border: solid 0px #FFF; ');
+      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; opacity: 0; ');
     };
   </script>
   <script type="text/javascript" id="gwd-init-code">
