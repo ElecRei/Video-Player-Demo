@@ -182,6 +182,13 @@
       left: 0px;
       top: 0px;
     }
+    .gwd-taparea-1n8h {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 970px;
+      height: 500px;
+    }
   </style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
   <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
@@ -219,6 +226,7 @@
       <gwd-metric-event source="video_player_youtube" event="previewed50percent" metric="video_player_youtube: YouTube preview midpoint"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
+      <gwd-metric-event source="background_click" event="tapareaexit" metric=""></gwd-metric-event>
     </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
@@ -231,6 +239,7 @@
       <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px" style="">
         <div class="gwd-page-content expanded">
           <div class="gwd-div-cjs2" id="expanded_background"></div>
+          <gwd-taparea id="background_click" class="gwd-taparea-1n8h"></gwd-taparea>
           <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4" autoplay="standard" allowfullscreen=""></gwd-youtube>
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
@@ -248,6 +257,7 @@
         </div>
       </div>
     </div>
+    <gwd-exit metric="MediaNet - Click - Background" url="http://medianet.com/"></gwd-exit>
   </gwd-doubleclick>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -259,6 +269,7 @@
       gwd.actions.events.addHandler('video_01', 'click', gwd.auto_Video_01Click, false);
       gwd.actions.events.addHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.addHandler('video_03', 'click', gwd.auto_Video_03Click, false);
+      gwd.actions.events.addHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
@@ -267,6 +278,7 @@
       gwd.actions.events.removeHandler('video_01', 'click', gwd.auto_Video_01Click, false);
       gwd.actions.events.removeHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.removeHandler('video_03', 'click', gwd.auto_Video_03Click, false);
+      gwd.actions.events.removeHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -295,6 +307,10 @@
     gwd.auto_Video_03Click = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'Cwkej79U3ek', false);
+    };
+    gwd.auto_Background_clickAction = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Background', 'http://medianet.com/', true, true);
     };
   </script>
   <script type="text/javascript" id="gwd-init-code">
