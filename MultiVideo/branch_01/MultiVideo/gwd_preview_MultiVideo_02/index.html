@@ -69,10 +69,10 @@ body {
 }
 .close-button {
     position: absolute;
-    height: 48px;
-    width: 48px;
     top: 8px;
-    left: 914px;
+    width: 24px;
+    height: 24px;
+    left: 938px;
     background-image: none;
     background-color: rgb(205, 205, 205);
 }
@@ -174,8 +174,16 @@ body {
     top: 0px;
     background-image: none;
     background-color: rgb(45, 45, 45);
+}
+.gwd-img-liye {
+    position: absolute;
+    width: 231px;
+    height: 113px;
+    left: 0px;
+    top: 0px;
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
+  <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
   <link href="gwdyoutube_style.css" data-version="11" data-exports-type="gwd-youtube" rel="stylesheet">
   <link href="gwddoubleclick_style.css" data-version="10" data-exports-type="gwd-doubleclick" rel="stylesheet">
   <link href="gwdtaparea_style.css" data-version="4" data-exports-type="gwd-taparea" rel="stylesheet">
@@ -189,6 +197,7 @@ body {
   <script data-source="gwddoubleclick_min.js" data-version="10" data-exports-type="gwd-doubleclick" type="text/javascript" src="gwddoubleclick_min.js"></script>
   <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
   <script data-source="gwdyoutube_min.js" data-version="11" data-exports-type="gwd-youtube" type="text/javascript" src="gwdyoutube_min.js"></script>
+  <script data-source="gwdimage_min.js" data-version="7" data-exports-type="gwd-image" type="text/javascript" src="gwdimage_min.js"></script>
 </head>
 
 <body class="document-body">
@@ -225,9 +234,11 @@ body {
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
           <div class="gwd-div-1d4g" id="video_selection">
-            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01"></div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02"></div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03"></div>
+            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01" style="cursor: pointer;">
+              <img is="gwd-image" source="video_00_test.jpg" id="gwd-image_1" class="gwd-img-liye">
+            </div>
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02" style="cursor: pointer;"></div>
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03" style="cursor: pointer;"></div>
           </div>
         </div>
       </div>
@@ -319,4 +330,4 @@ Enabler.counter("video_player_youtube: YouTube preview first quartile");
 Enabler.counter("video_player_youtube: YouTube preview midpoint");
 Enabler.counter("video_player_youtube: YouTube preview third quartile");
 Enabler.counter("video_player_youtube: YouTube preview complete");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
