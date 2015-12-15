@@ -195,6 +195,99 @@ body {
     height: 113px;
     left: 0px;
     top: 0px;
+}
+.gwd-taparea-1n8h {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 970px;
+    height: 500px;
+}
+.gwd-div-zunj {
+    position: absolute;
+    width: 231px;
+    height: 113px;
+    left: 30px;
+    top: 0px;
+}
+.gwd-div-1b3g {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 231px;
+    height: 113px;
+    opacity: 0.5;
+    background-image: none;
+    background-color: rgb(0, 0, 0);
+}
+.gwd-p-17jv {
+    position: absolute;
+    font-family: 'Times New Roman';
+    color: rgb(0, 0, 0);
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    left: 0px;
+    width: 231px;
+    height: 44px;
+    transform-origin: 115.5px 22px 0px;
+    -webkit-transform-origin: 115.5px 22px 0px;
+    -moz-transform-origin: 115.5px 22px 0px;
+    top: 35px;
+}
+.gwd-div-17dt {
+    z-index: 0;
+    left: 30px;
+    top: 128px;
+}
+.gwd-div-1nri {
+    cursor: pointer;
+}
+.gwd-p-11yf {
+    border-color: rgb(254, 254, 254);
+    cursor: pointer;
+    outline-color: rgb(254, 254, 254);
+    -webkit-column-rule-color: rgb(254, 254, 254);
+    -moz-column-rule-color: rgb(254, 254, 254);
+    column-rule-color: rgb(254, 254, 254);
+    -webkit-text-emphasis-color: rgb(254, 254, 254);
+    -moz-text-emphasis-color: rgb(254, 254, 254);
+    text-emphasis-color: rgb(254, 254, 254);
+    -webkit-text-fill-color: rgb(254, 254, 254);
+    -moz-text-fill-color: rgb(254, 254, 254);
+    text-fill-color: rgb(254, 254, 254);
+    -webkit-text-stroke-color: rgb(254, 254, 254);
+    -moz-text-stroke-color: rgb(254, 254, 254);
+    text-stroke-color: rgb(254, 254, 254);
+}
+.gwd-br-183h {
+    border-color: rgb(254, 254, 254);
+    color: rgb(254, 254, 254);
+    cursor: pointer;
+    outline-color: rgb(254, 254, 254);
+    -webkit-column-rule-color: rgb(254, 254, 254);
+    -moz-column-rule-color: rgb(254, 254, 254);
+    column-rule-color: rgb(254, 254, 254);
+    -webkit-text-emphasis-color: rgb(254, 254, 254);
+    -moz-text-emphasis-color: rgb(254, 254, 254);
+    text-emphasis-color: rgb(254, 254, 254);
+    -webkit-text-fill-color: rgb(254, 254, 254);
+    -moz-text-fill-color: rgb(254, 254, 254);
+    text-fill-color: rgb(254, 254, 254);
+    -webkit-text-stroke-color: rgb(254, 254, 254);
+    -moz-text-stroke-color: rgb(254, 254, 254);
+    text-stroke-color: rgb(254, 254, 254);
+}
+.gwd-div-kqj3 {
+    left: 30px;
+    top: 0px;
+}
+.gwd-div-14gz {
+    position: absolute;
+    width: 231px;
+    height: 113px;
+    left: 0px;
+    top: 0px;
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
   <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
@@ -232,6 +325,7 @@ body {
       <gwd-metric-event source="video_player_youtube" event="previewed50percent" metric="video_player_youtube: YouTube preview midpoint"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
+      <gwd-metric-event source="background_click" event="tapareaexit" metric=""></gwd-metric-event>
     </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
@@ -244,6 +338,7 @@ body {
       <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px" style="">
         <div class="gwd-page-content expanded">
           <div class="gwd-div-cjs2" id="expanded_background"></div>
+          <gwd-taparea id="background_click" class="gwd-taparea-1n8h"></gwd-taparea>
           <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4" autoplay="standard" allowfullscreen=""></gwd-youtube>
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
@@ -254,13 +349,27 @@ body {
             <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02" style="cursor: pointer;">
               <img is="gwd-image" source="video_02_thumb.jpg" id="video_02_thumb" class="gwd-img-17tp">
             </div>
+            <div class="gwd-div-zunj gwd-div-17dt" id="video_02_overlay" style="cursor: pointer; opacity: 0;">
+              <div class="gwd-div-1b3g gwd-div-1nri" id="overlay_background_1" style=""></div>
+              <p class="gwd-p-17jv gwd-p-11yf" id="overlay_title_1" style="color: rgb(254, 254, 254); font-family: Cabin, sans-serif; font-size: 1.1em; text-align: center;">Galantis - In My Head (Official Video)
+                <br class="gwd-br-183h">
+              </p>
+            </div>
             <div class="gwd-div-u1m7 gwd-div-euph" id="video_01" style="cursor: pointer;">
               <img is="gwd-image" source="video_01_thumb.jpg" id="video_01_thumb" class="gwd-img-18sa">
+            </div>
+            <div class="gwd-div-zunj gwd-div-kqj3" id="video_01_overlay" style="opacity: 0; cursor: pointer;">
+              <div class="gwd-div-14gz" id="overlay_hover_border"></div>
+              <div class="gwd-div-1b3g" id="overlay_background" style=""></div>
+              <p class="gwd-p-17jv" id="overlay_title" style="color: rgb(254, 254, 254); font-family: Cabin, sans-serif; font-size: 1.1em; text-align: center;">Galantis - In My Head (Official Video)
+                <br class="">
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <gwd-exit metric="MediaNet - Click - Background" url="http://medianet.com/"></gwd-exit>
   </gwd-doubleclick>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -269,17 +378,27 @@ body {
       gwd.actions.events.addHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
-      gwd.actions.events.addHandler('video_01', 'click', gwd.auto_Video_01Click, false);
+      gwd.actions.events.addHandler('video_01_overlay', 'click', gwd.auto_Video_01Click, false);
       gwd.actions.events.addHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.addHandler('video_03', 'click', gwd.auto_Video_03Click, false);
+      gwd.actions.events.addHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
+      gwd.actions.events.addHandler('video_01_overlay', 'mouseover', gwd.auto_Video_01_overlayMouseover, false);
+      gwd.actions.events.addHandler('video_01_overlay', 'mouseout', gwd.auto_Video_01_overlayMouseout, false);
+      gwd.actions.events.addHandler('video_01_overlay', 'mouseover', gwd.auto_Video_01_overlayMouseover1, false);
+      gwd.actions.events.addHandler('video_01_overlay', 'mouseout', gwd.auto_Video_01_overlayMouseout1, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
-      gwd.actions.events.removeHandler('video_01', 'click', gwd.auto_Video_01Click, false);
+      gwd.actions.events.removeHandler('video_01_overlay', 'click', gwd.auto_Video_01Click, false);
       gwd.actions.events.removeHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.removeHandler('video_03', 'click', gwd.auto_Video_03Click, false);
+      gwd.actions.events.removeHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
+      gwd.actions.events.removeHandler('video_01_overlay', 'mouseover', gwd.auto_Video_01_overlayMouseover, false);
+      gwd.actions.events.removeHandler('video_01_overlay', 'mouseout', gwd.auto_Video_01_overlayMouseout, false);
+      gwd.actions.events.removeHandler('video_01_overlay', 'mouseover', gwd.auto_Video_01_overlayMouseover1, false);
+      gwd.actions.events.removeHandler('video_01_overlay', 'mouseout', gwd.auto_Video_01_overlayMouseout1, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -308,6 +427,26 @@ body {
     gwd.auto_Video_03Click = function(event) {
       // GWD Predefined Function
       gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'Cwkej79U3ek', false);
+    };
+    gwd.auto_Background_clickAction = function(event) {
+      // GWD Predefined Function
+      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Background', 'http://medianet.com/', true, true);
+    };
+    gwd.auto_Video_01_overlayMouseover = function(event) {
+      // GWD Predefined Function
+      gwd.actions.events.setInlineStyle('video_01_overlay', 'transition: all 0.2s ease; opacity: 1; ');
+    };
+    gwd.auto_Video_01_overlayMouseout = function(event) {
+      // GWD Predefined Function
+      gwd.actions.events.setInlineStyle('video_01_overlay', 'transition: all 0.2s ease; opacity: 0; ');
+    };
+    gwd.auto_Video_01_overlayMouseover1 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; border: solid 4px #FFF; ');
+    };
+    gwd.auto_Video_01_overlayMouseout1 = function(event) {
+      // GWD Predefined Function
+      gwd.actions.events.setInlineStyle('overlay_hover_border', 'transition: all 0.2s ease; border: solid 0px #FFF; ');
     };
   </script>
   <script type="text/javascript" id="gwd-init-code">
@@ -366,4 +505,6 @@ Enabler.counter("video_player_youtube: YouTube preview first quartile");
 Enabler.counter("video_player_youtube: YouTube preview midpoint");
 Enabler.counter("video_player_youtube: YouTube preview third quartile");
 Enabler.counter("video_player_youtube: YouTube preview complete");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
+Enabler.counter("background_click: tapareaexit");
+Enabler.exit("MediaNet - Click - Background", "http://medianet.com/");
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"},{"source":"background_click","metric":"background_click: tapareaexit"}],"timers":[],"exits":[{"exitId":"MediaNet - Click - Background","url":"http://medianet.com/"}],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
