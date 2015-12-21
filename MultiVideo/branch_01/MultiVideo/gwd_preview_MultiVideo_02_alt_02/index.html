@@ -69,10 +69,10 @@ body {
 }
 .close-button {
     position: absolute;
+    height: 48px;
+    width: 48px;
     top: 8px;
-    width: 24px;
-    height: 24px;
-    left: 938px;
+    left: 914px;
     background-image: none;
     background-color: rgb(205, 205, 205);
 }
@@ -114,7 +114,7 @@ body {
     -webkit-transform-origin: 336px 185.645px 0px;
     -moz-transform-origin: 336px 185.645px 0px;
     left: 8px;
-    top: 83px;
+    top: 64px;
 }
 .gwd-p-18ws {
     position: absolute;
@@ -130,9 +130,9 @@ body {
 .gwd-div-1d4g {
     position: absolute;
     width: 290px;
-    height: 371px;
     left: 680px;
-    top: 83px;
+    top: 64px;
+    height: 371px;
 }
 .gwd-div-u1m7 {
     position: absolute;
@@ -174,44 +174,8 @@ body {
     top: 0px;
     background-image: none;
     background-color: rgb(45, 45, 45);
-}
-.gwd-img-18sa {
-    position: absolute;
-    left: 0px;
-    width: 231px;
-    height: 113px;
-    top: 0px;
-}
-.gwd-img-17tp {
-    position: absolute;
-    width: 231px;
-    height: 113px;
-    left: 0px;
-    top: 0px;
-}
-.gwd-img-1gse {
-    position: absolute;
-    width: 231px;
-    height: 113px;
-    left: 0px;
-    top: 0px;
-}
-.gwd-taparea-1n8h {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 970px;
-    height: 500px;
-}
-.gwd-div-e7nz {
-    position: absolute;
-    width: 57px;
-    height: 20px;
-    left: 8px;
-    top: 468px;
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
-  <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
   <link href="gwdyoutube_style.css" data-version="11" data-exports-type="gwd-youtube" rel="stylesheet">
   <link href="gwddoubleclick_style.css" data-version="10" data-exports-type="gwd-doubleclick" rel="stylesheet">
   <link href="gwdtaparea_style.css" data-version="4" data-exports-type="gwd-taparea" rel="stylesheet">
@@ -225,7 +189,6 @@ body {
   <script data-source="gwddoubleclick_min.js" data-version="10" data-exports-type="gwd-doubleclick" type="text/javascript" src="gwddoubleclick_min.js"></script>
   <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
   <script data-source="gwdyoutube_min.js" data-version="11" data-exports-type="gwd-youtube" type="text/javascript" src="gwdyoutube_min.js"></script>
-  <script data-source="gwdimage_min.js" data-version="7" data-exports-type="gwd-image" type="text/javascript" src="gwdimage_min.js"></script>
 </head>
 
 <body class="document-body">
@@ -246,7 +209,6 @@ body {
       <gwd-metric-event source="video_player_youtube" event="previewed50percent" metric="video_player_youtube: YouTube preview midpoint"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
-      <gwd-metric-event source="background_click" event="tapareaexit" metric=""></gwd-metric-event>
     </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
@@ -256,32 +218,40 @@ body {
           <gwd-taparea id="expand-button" class="expand-button"></gwd-taparea>
         </div>
       </div>
-      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px" style="">
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId: '898875623559386',
+            xfbml: true,
+            version: 'v2.5'
+          });
+        };
+
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) {
+            return;
+          }
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/en_US/sdk.js";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px">
         <div class="gwd-page-content expanded">
           <div class="gwd-div-cjs2" id="expanded_background"></div>
-          <gwd-taparea id="background_click" class="gwd-taparea-1n8h"></gwd-taparea>
-          <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4" autoplay="standard" allowfullscreen=""></gwd-youtube>
-          <div class="gwd-div-e7nz" id="facebook_share_button"></div>
-          <script>
-          	document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button\"></div>";
-          </script>
+          <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4"></gwd-youtube>
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
           <div class="gwd-div-1d4g" id="video_selection">
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03" style="cursor: pointer;">
-              <img is="gwd-image" source="video_03_thumb.jpg" id="video_03_thumb" class="gwd-img-1gse">
-            </div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02" style="cursor: pointer;">
-              <img is="gwd-image" source="video_02_thumb.jpg" id="video_02_thumb" class="gwd-img-17tp">
-            </div>
-            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01" style="cursor: pointer;">
-              <img is="gwd-image" source="video_01_thumb.jpg" id="video_01_thumb" class="gwd-img-18sa">
-            </div>
+            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01"></div>
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02"></div>
+            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03"></div>
           </div>
         </div>
       </div>
     </div>
-    <gwd-exit metric="MediaNet - Click - Background" url="http://medianet.com/"></gwd-exit>
   </gwd-doubleclick>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -290,19 +260,11 @@ body {
       gwd.actions.events.addHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.addHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
-      gwd.actions.events.addHandler('video_01', 'click', gwd.auto_Video_01Click, false);
-      gwd.actions.events.addHandler('video_02', 'click', gwd.auto_Video_02Click, false);
-      gwd.actions.events.addHandler('video_03', 'click', gwd.auto_Video_03Click, false);
-      gwd.actions.events.addHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_buttonAction, false);
       gwd.actions.events.removeHandler('close-button', 'action', gwd.handleClose_reportManualClose, false);
-      gwd.actions.events.removeHandler('video_01', 'click', gwd.auto_Video_01Click, false);
-      gwd.actions.events.removeHandler('video_02', 'click', gwd.auto_Video_02Click, false);
-      gwd.actions.events.removeHandler('video_03', 'click', gwd.auto_Video_03Click, false);
-      gwd.actions.events.removeHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -320,23 +282,6 @@ body {
       // GWD Predefined Function
       gwd.actions.gwdDoubleclick.reportManualClose('gwd-ad');
     };
-    gwd.auto_Video_01Click = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'aZ5gkJDmZv4', false);
-    };
-    gwd.auto_Video_02Click = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'BpKJTogZ16A', false);
-    };
-    gwd.auto_Video_03Click = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdYoutube.setYouTubeId('video_player_youtube', 'Cwkej79U3ek', false);
-    };
-    gwd.auto_Background_clickAction = function(event) {
-      // GWD Predefined Function
-      gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Background', 'http://medianet.com/', true, true);
-    };
-     //document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button_count\"></div>";
   </script>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
@@ -394,6 +339,4 @@ Enabler.counter("video_player_youtube: YouTube preview first quartile");
 Enabler.counter("video_player_youtube: YouTube preview midpoint");
 Enabler.counter("video_player_youtube: YouTube preview third quartile");
 Enabler.counter("video_player_youtube: YouTube preview complete");
-Enabler.counter("background_click: tapareaexit");
-Enabler.exit("MediaNet - Click - Background", "http://medianet.com/");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"},{"source":"background_click","metric":"background_click: tapareaexit"}],"timers":[],"exits":[{"exitId":"MediaNet - Click - Background","url":"http://medianet.com/"}],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>

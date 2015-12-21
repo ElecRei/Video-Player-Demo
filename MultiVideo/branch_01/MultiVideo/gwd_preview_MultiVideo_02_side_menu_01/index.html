@@ -102,81 +102,8 @@ body {
     -moz-transform-origin: 485px 37px 0px;
     top: 88px;
     left: 0px;
-}
-.gwd-youtube-1bx4 {
-    position: absolute;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    width: 672px;
-    height: 371px;
-    transform-origin: 336px 185.645px 0px;
-    -webkit-transform-origin: 336px 185.645px 0px;
-    -moz-transform-origin: 336px 185.645px 0px;
-    left: 8px;
-    top: 64px;
-}
-.gwd-p-18ws {
-    position: absolute;
-    width: 672px;
-    left: 8px;
-    top: 8px;
-    height: 48px;
-    font-family: Cabin, sans-serif;
-    font-weight: 700;
-    font-size: 2.5em;
-    color: rgb(254, 254, 254);
-}
-.gwd-div-1d4g {
-    position: absolute;
-    width: 290px;
-    left: 680px;
-    top: 64px;
-    height: 371px;
-}
-.gwd-div-u1m7 {
-    position: absolute;
-    width: 231px;
-    height: 113px;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    left: 30px;
-    top: 0px;
-}
-.gwd-div-1vtj {
-    left: 30px;
-    top: 141px;
-    background-image: none;
-    background-color: rgb(0, 135, 194);
-}
-.gwd-div-euph {
-    left: 30px;
-    top: 0px;
-    background-image: none;
-    background-color: rgb(0, 187, 255);
-}
-.gwd-div-wlof {
-    left: 30px;
-    top: 258px;
-    background-image: none;
-    background-color: rgb(0, 89, 129);
-}
-.gwd-div-3kpc {
-    left: 30px;
-    top: 129px;
-}
-.gwd-div-cjs2 {
-    position: absolute;
-    left: 0px;
-    width: 970px;
-    height: 500px;
-    top: 0px;
-    background-image: none;
-    background-color: rgb(45, 45, 45);
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
-  <link href="gwdyoutube_style.css" data-version="11" data-exports-type="gwd-youtube" rel="stylesheet">
   <link href="gwddoubleclick_style.css" data-version="10" data-exports-type="gwd-doubleclick" rel="stylesheet">
   <link href="gwdtaparea_style.css" data-version="4" data-exports-type="gwd-taparea" rel="stylesheet">
   <link href="gwdpagedeck_style.css" data-version="8" data-exports-type="gwd-pagedeck" rel="stylesheet">
@@ -188,7 +115,6 @@ body {
   <script data-source="https://s0.2mdn.net/ads/studio/Enabler.js" data-exports-type="gwd-doubleclick" type="text/javascript" src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
   <script data-source="gwddoubleclick_min.js" data-version="10" data-exports-type="gwd-doubleclick" type="text/javascript" src="gwddoubleclick_min.js"></script>
   <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
-  <script data-source="gwdyoutube_min.js" data-version="11" data-exports-type="gwd-youtube" type="text/javascript" src="gwdyoutube_min.js"></script>
 </head>
 
 <body class="document-body">
@@ -196,19 +122,6 @@ body {
     <gwd-metric-configuration>
       <gwd-metric-event source="expand-button" event="tapareaexit" metric=""></gwd-metric-event>
       <gwd-metric-event source="close-button" event="tapareaexit" metric=""></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="playpressed" metric="video_player_youtube: YouTube play"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="paused" metric="video_player_youtube: YouTube pause"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="ended" metric="video_player_youtube: YouTube end"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="replayed" metric="video_player_youtube: YouTube replayed"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="viewed25percent" metric="video_player_youtube: YouTube first quartile"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="viewed50percent" metric="video_player_youtube: YouTube midpoint"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="viewed75percent" metric="video_player_youtube: YouTube third quartile"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="viewed100percent" metric="video_player_youtube: YouTube complete"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="previewed0percent" metric="video_player_youtube: YouTube preview started"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="previewed25percent" metric="video_player_youtube: YouTube preview first quartile"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="previewed50percent" metric="video_player_youtube: YouTube preview midpoint"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
-      <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
     </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
@@ -218,17 +131,9 @@ body {
           <gwd-taparea id="expand-button" class="expand-button"></gwd-taparea>
         </div>
       </div>
-      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px" style="">
+      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px">
         <div class="gwd-page-content expanded">
-          <div class="gwd-div-cjs2" id="expanded_background"></div>
-          <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4"></gwd-youtube>
-          <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
-          <p class="gwd-p-18ws">Logo goes here</p>
-          <div class="gwd-div-1d4g" id="video_selection">
-            <div class="gwd-div-u1m7 gwd-div-euph" id="video_01"></div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-3kpc" id="video_02"></div>
-            <div class="gwd-div-u1m7 gwd-div-1vtj gwd-div-wlof" id="video_03"></div>
-          </div>
+          <gwd-taparea id="close-button" class="close-button"></gwd-taparea>
         </div>
       </div>
     </div>
@@ -306,17 +211,4 @@ body {
 Enabler.setExpandingPixelOffsets(0,0,970,500,false,false);
 Enabler.counter("expand-button: tapareaexit");
 Enabler.counter("close-button: tapareaexit");
-Enabler.counter("video_player_youtube: YouTube play");
-Enabler.counter("video_player_youtube: YouTube pause");
-Enabler.counter("video_player_youtube: YouTube end");
-Enabler.counter("video_player_youtube: YouTube replayed");
-Enabler.counter("video_player_youtube: YouTube first quartile");
-Enabler.counter("video_player_youtube: YouTube midpoint");
-Enabler.counter("video_player_youtube: YouTube third quartile");
-Enabler.counter("video_player_youtube: YouTube complete");
-Enabler.counter("video_player_youtube: YouTube preview started");
-Enabler.counter("video_player_youtube: YouTube preview first quartile");
-Enabler.counter("video_player_youtube: YouTube preview midpoint");
-Enabler.counter("video_player_youtube: YouTube preview third quartile");
-Enabler.counter("video_player_youtube: YouTube preview complete");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"}],"timers":[],"exits":[],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>

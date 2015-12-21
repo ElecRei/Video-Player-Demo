@@ -189,6 +189,13 @@
       width: 970px;
       height: 500px;
     }
+    .gwd-div-e7nz {
+      position: absolute;
+      width: 57px;
+      height: 20px;
+      left: 8px;
+      top: 468px;
+    }
   </style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
   <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
@@ -241,6 +248,10 @@
           <div class="gwd-div-cjs2" id="expanded_background"></div>
           <gwd-taparea id="background_click" class="gwd-taparea-1n8h"></gwd-taparea>
           <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4" autoplay="standard" allowfullscreen=""></gwd-youtube>
+          <div class="gwd-div-e7nz" id="facebook_share_button"></div>
+          <script>
+          	document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button\"></div>";
+          </script>
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
           <div class="gwd-div-1d4g" id="video_selection">
@@ -312,6 +323,7 @@
       // GWD Predefined Function
       gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Background', 'http://medianet.com/', true, true);
     };
+     //document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button_count\"></div>";
   </script>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
