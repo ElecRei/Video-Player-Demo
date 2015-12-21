@@ -197,6 +197,23 @@
       <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
     </gwd-metric-configuration>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '898875623559386',
+          xfbml      : true,
+          version    : 'v2.5'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
         <div class="gwd-page-content banner">
