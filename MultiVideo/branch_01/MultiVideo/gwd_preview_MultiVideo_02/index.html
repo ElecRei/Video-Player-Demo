@@ -209,6 +209,41 @@ body {
     height: 20px;
     left: 8px;
     top: 468px;
+}
+.gwd-div-1vmt {
+    position: absolute;
+    width: 123.681px;
+    height: 32px;
+    top: 462px;
+    left: 8px;
+}
+.gwd-img-1rva {
+    position: absolute;
+    width: 124px;
+    height: 32px;
+    left: 0px;
+    top: 0px;
+}
+.gwd-taparea-167q {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 124px;
+    height: 32px;
+}
+.gwd-taparea-reqg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 124px;
+    height: 32px;
+}
+.gwd-taparea-187o {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 124px;
+    height: 32px;
 }</style>
   <link href="gwdpage_style.css" data-version="8" data-exports-type="gwd-page" rel="stylesheet">
   <link href="gwdimage_style.css" data-version="7" data-exports-type="gwd-image" rel="stylesheet">
@@ -247,6 +282,9 @@ body {
       <gwd-metric-event source="video_player_youtube" event="previewed75percent" metric="video_player_youtube: YouTube preview third quartile"></gwd-metric-event>
       <gwd-metric-event source="video_player_youtube" event="previewed100percent" metric="video_player_youtube: YouTube preview complete"></gwd-metric-event>
       <gwd-metric-event source="background_click" event="tapareaexit" metric=""></gwd-metric-event>
+      <gwd-metric-event source="video_01_click" event="tapareaexit" metric=""></gwd-metric-event>
+      <gwd-metric-event source="video_02_click" event="tapareaexit" metric=""></gwd-metric-event>
+      <gwd-metric-event source="video_03_click" event="tapareaexit" metric=""></gwd-metric-event>
     </gwd-metric-configuration>
     <div is="gwd-pagedeck" class="gwd-page-container" id="pagedeck" default-page="banner-page">
       <div is="gwd-page" id="banner-page" data-gwd-name="Banner page" class="gwd-page-wrapper banner gwd-lightbox" data-gwd-width="970px" data-gwd-height="250px">
@@ -256,15 +294,11 @@ body {
           <gwd-taparea id="expand-button" class="expand-button"></gwd-taparea>
         </div>
       </div>
-      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px" style="">
+      <div is="gwd-page" id="expanded-page" expanded="" data-gwd-name="Expanded page" class="gwd-page-wrapper expanded gwd-lightbox" data-gwd-width="970px" data-gwd-height="500px">
         <div class="gwd-page-content expanded">
           <div class="gwd-div-cjs2" id="expanded_background"></div>
           <gwd-taparea id="background_click" class="gwd-taparea-1n8h"></gwd-taparea>
           <gwd-youtube id="video_player_youtube" video-url="https://youtu.be/aZ5gkJDmZv4" annotations="" related="" title="" class="gwd-youtube-1bx4" autoplay="standard" allowfullscreen=""></gwd-youtube>
-          <div class="gwd-div-e7nz" id="facebook_share_button"></div>
-          <script>
-          	document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button\"></div>";
-          </script>
           <gwd-taparea id="close-button" class="close-button" style=""></gwd-taparea>
           <p class="gwd-p-18ws">Logo goes here</p>
           <div class="gwd-div-1d4g" id="video_selection">
@@ -278,10 +312,17 @@ body {
               <img is="gwd-image" source="video_01_thumb.jpg" id="video_01_thumb" class="gwd-img-18sa">
             </div>
           </div>
+          <div class="gwd-div-1vmt" id="facebook_share" style="cursor: pointer;">
+            <img is="gwd-image" source="facebook_share.png" id="share_button" class="gwd-img-1rva">
+            <gwd-taparea id="video_01_click" class="gwd-taparea-167q"></gwd-taparea>
+            <gwd-taparea id="video_02_click" class="gwd-taparea-reqg" style="display: none;"></gwd-taparea>
+            <gwd-taparea id="video_03_click" class="gwd-taparea-187o" style="display: none;"></gwd-taparea>
+          </div>
         </div>
       </div>
     </div>
     <gwd-exit metric="MediaNet - Click - Background" url="http://medianet.com/"></gwd-exit>
+    <gwd-exit metric="MediaNet - Click - Video 1 Share" url="https://www.facebook.com/sharer/sharer.php?u=https%3A//youtu.be/aZ5gkJDmZv4"></gwd-exit>
   </gwd-doubleclick>
   <script type="text/javascript" gwd-events="registration">
     // Support code for event handling in Google Web Designer
@@ -294,6 +335,7 @@ body {
       gwd.actions.events.addHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.addHandler('video_03', 'click', gwd.auto_Video_03Click, false);
       gwd.actions.events.addHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
+      gwd.actions.events.addHandler('video_01_click', 'click', gwd.auto_Video_01_clickClick, false);
     };
     gwd.actions.events.deregisterEventHandlers = function(event) {
       gwd.actions.events.removeHandler('expand-button', 'action', gwd.handleExpand_buttonAction, false);
@@ -303,6 +345,7 @@ body {
       gwd.actions.events.removeHandler('video_02', 'click', gwd.auto_Video_02Click, false);
       gwd.actions.events.removeHandler('video_03', 'click', gwd.auto_Video_03Click, false);
       gwd.actions.events.removeHandler('background_click', 'action', gwd.auto_Background_clickAction, false);
+      gwd.actions.events.removeHandler('video_01_click', 'click', gwd.auto_Video_01_clickClick, false);
     };
     document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
     document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -336,7 +379,10 @@ body {
       // GWD Predefined Function
       gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Background', 'http://medianet.com/', true, true);
     };
-     //document.getElementById('facebook_share_button').innerHTML = "<div class=\"fb-share-button\" data-href=\"https://youtu.be/aZ5gkJDmZv4\" data-layout=\"button_count\"></div>";
+    gwd.auto_video_01_clickClick = function(event) {
+     // GWD Predefined Function
+    gwd.actions.gwdDoubleclick.exit('gwd-ad', 'MediaNet - Click - Video 1 Share', 'https://www.facebook.com/sharer/sharer.php?u=https%3A//youtu.be/aZ5gkJDmZv4', true, true);
+    };
   </script>
   <script type="text/javascript" id="gwd-init-code">
     (function() {
@@ -395,5 +441,9 @@ Enabler.counter("video_player_youtube: YouTube preview midpoint");
 Enabler.counter("video_player_youtube: YouTube preview third quartile");
 Enabler.counter("video_player_youtube: YouTube preview complete");
 Enabler.counter("background_click: tapareaexit");
+Enabler.counter("video_01_click: tapareaexit");
+Enabler.counter("video_02_click: tapareaexit");
+Enabler.counter("video_03_click: tapareaexit");
 Enabler.exit("MediaNet - Click - Background", "http://medianet.com/");
-}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"},{"source":"background_click","metric":"background_click: tapareaexit"}],"timers":[],"exits":[{"exitId":"MediaNet - Click - Background","url":"http://medianet.com/"}],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
+Enabler.exit("MediaNet - Click - Video 1 Share", "https://www.facebook.com/sharer/sharer.php?u=https%3A//youtu.be/aZ5gkJDmZv4");
+}</script><script type="text/gwd-admetadata">{"version":1,"type":"DoubleClick","format":"","template":"","politeload":true,"fullscreen":false,"counters":[{"source":"expand-button","metric":"expand-button: tapareaexit"},{"source":"close-button","metric":"close-button: tapareaexit"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube play"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube pause"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube end"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube replayed"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube complete"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview started"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview first quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview midpoint"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview third quartile"},{"source":"video_player_youtube","metric":"video_player_youtube: YouTube preview complete"},{"source":"background_click","metric":"background_click: tapareaexit"},{"source":"video_01_click","metric":"video_01_click: tapareaexit"},{"source":"video_02_click","metric":"video_02_click: tapareaexit"},{"source":"video_03_click","metric":"video_03_click: tapareaexit"}],"timers":[],"exits":[{"exitId":"MediaNet - Click - Background","url":"http://medianet.com/"},{"exitId":"MediaNet - Click - Video 1 Share","url":"https://www.facebook.com/sharer/sharer.php?u=https%3A//youtu.be/aZ5gkJDmZv4"}],"creativeProperties":{"minWidth":970,"minHeight":250,"maxWidth":970,"maxHeight":500},"components":["gwd-taparea","gwd-image","gwd-youtube","gwd-doubleclick","gwd-page","gwd-pagedeck"]}</script></body></html>
